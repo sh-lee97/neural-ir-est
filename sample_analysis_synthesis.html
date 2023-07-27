@@ -1,0 +1,76 @@
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:840;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #[id] </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/analysis_synthesis/audiolm/[ID]_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Reverberant speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/analysis_synthesis/audiolm/[ID]_0_conv_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Dry speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/analysis_synthesis/audiolm/[ID]_0_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/analysis_synthesis/audiolm/[ID]_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/analysis_synthesis/rqt/[ID]_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/analysis_synthesis/valle/[ID]_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/analysis_synthesis/fvn/[ID]_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/analysis_synthesis/audiolm/[ID]_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/analysis_synthesis/rqt/[ID]_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/analysis_synthesis/valle/[ID]_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/analysis_synthesis/fvn/[ID]_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->

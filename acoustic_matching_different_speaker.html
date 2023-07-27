@@ -1,0 +1,1049 @@
+<head>
+  <style>
+    div {
+      max-width: 1000px;
+    }
+    table, td {
+      border: 1px solid grey;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Acoustic Matching Results (Different Speaker)</title>
+</head>
+
+<center>
+  <h2> Audio Samples </h2>
+  Results on <em></em><br>
+
+    <table style="max-width:960px; border:0px;">
+    <tr>
+    <td style="max-width:960px; border:0px;">
+  <hr>
+  </td>
+  </tr>
+  </table>
+
+<br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:630;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #1 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/8_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Wet (target)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/8_0_target_wet.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Dry (source) 
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/8_0_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/8_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/8_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/8_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/8_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/8_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/8_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/8_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/8_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, continuous (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/8_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/8_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/8_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, cont. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/8_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:630;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #2 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/21_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Wet (target)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/21_0_target_wet.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Dry (source) 
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/21_0_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/21_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/21_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/21_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/21_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/21_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/21_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/21_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/21_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, continuous (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/21_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/21_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/21_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, cont. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/21_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:630;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #3 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/28_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Wet (target)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/28_0_target_wet.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Dry (source) 
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/28_0_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/28_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/28_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/28_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/28_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/28_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/28_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/28_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/28_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, continuous (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/28_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/28_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/28_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, cont. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/28_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:630;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #4 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/44_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Wet (target)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/44_0_target_wet.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Dry (source) 
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/44_0_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/44_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/44_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/44_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/44_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/44_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/44_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/44_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/44_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, continuous (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/44_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/44_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/44_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, cont. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/44_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:630;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #5 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/45_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Wet (target)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/45_0_target_wet.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Dry (source) 
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/45_0_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/45_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/45_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/45_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/45_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/45_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/45_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/45_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/45_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, continuous (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/45_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/45_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/45_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, cont. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/45_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:630;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #6 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/52_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Wet (target)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/52_0_target_wet.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Dry (source) 
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/52_0_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/52_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/52_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/52_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/52_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/52_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/52_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/52_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/52_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, continuous (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/52_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/52_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/52_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, cont. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/52_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:630;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #7 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/38_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Wet (target)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/38_0_target_wet.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Dry (source) 
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/38_0_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/38_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/38_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/38_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/38_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/38_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/38_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/38_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/38_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, continuous (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/38_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/38_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/38_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, cont. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/38_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:630;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #8 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/1_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Wet (target)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/1_0_target_wet.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Dry (source) 
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/1_0_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/1_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/1_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/1_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/1_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/1_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/1_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/1_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/1_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, continuous (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/1_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/1_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/1_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, cont. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/1_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:630;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #9 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/0_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Wet (target)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/0_0_target_wet.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Dry (source) 
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/0_0_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/0_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/0_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/0_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/0_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/0_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/0_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/0_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/0_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, continuous (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/0_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/0_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/0_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, cont. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/0_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:630;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #10 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/19_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Wet (target)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/19_0_target_wet.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Dry (source) 
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/19_0_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/19_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/19_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/19_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/audiolm/style_matching_different_speaker/19_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt/style_matching_different_speaker/19_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/valle/style_matching_different_speaker/19_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/19_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/19_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, continuous (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/19_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=33%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/fvn/style_matching_different_speaker/19_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, discrete (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff/style_matching_different_speaker/19_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=33%> Non-AR, cont. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/acoustic_matching/rqt_ff_reg/style_matching_different_speaker/19_0_conv_source_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+</center>

@@ -1,0 +1,789 @@
+<head>
+  <style>
+    div {
+      max-width: 1000px;
+    }
+    table, td {
+      border: 1px solid grey;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blind Estimation Results</title>
+</head>
+
+<center>
+  <h2> Audio Samples </h2>
+  Results on <em></em><br>
+
+    <table style="max-width:960px; border:0px;">
+    <tr>
+    <td style="max-width:960px; border:0px;">
+  <hr>
+  </td>
+  </tr>
+  </table>
+
+<br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:840;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #1 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/9_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Reverberant speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/9_0_conv_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Dry speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/9_0_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/9_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/9_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/9_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/9_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/9_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/9_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/9_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/9_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:840;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #2 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/25_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Reverberant speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/25_0_conv_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Dry speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/25_0_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/25_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/25_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/25_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/25_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/25_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/25_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/25_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/25_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:840;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #3 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/26_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Reverberant speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/26_0_conv_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Dry speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/26_0_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/26_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/26_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/26_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/26_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/26_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/26_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/26_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/26_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:840;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #4 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/10_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Reverberant speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/10_0_conv_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Dry speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/10_0_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/10_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/10_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/10_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/10_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/10_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/10_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/10_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/10_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:840;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #5 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/45_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Reverberant speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/45_0_conv_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Dry speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/45_0_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/45_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/45_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/45_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/45_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/45_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/45_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/45_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/45_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:840;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #6 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/50_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Reverberant speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/50_0_conv_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Dry speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/50_0_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/50_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/50_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/50_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/50_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/50_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/50_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/50_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/50_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:840;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #7 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/42_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Reverberant speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/42_0_conv_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Dry speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/42_0_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/42_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/42_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/42_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/42_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/42_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/42_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/42_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/42_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:840;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #8 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/4_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Reverberant speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/4_0_conv_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Dry speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/4_0_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/4_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/4_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/4_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/4_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/4_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/4_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/4_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/4_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:840;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #9 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/31_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Reverberant speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/31_0_conv_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Dry speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/31_0_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/31_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/31_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/31_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/31_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/31_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/31_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/31_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/31_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+  <table style="max-width:840;" width="100%">
+    <tr>
+      <th colspan="4"> Sample #10 </th>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> Ground-truth RIR
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/34_0_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Reverberant speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/34_0_conv_ir.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> Dry speech
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/34_0_dry.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/34_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transformer-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/34_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/34_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (RIR)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/34_0_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+    <tr>
+    <td style="text-align: center;" valign='bottom' width=25%> AudioLM-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/audiolm/34_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> RQ-Transf. (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/rqt/34_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> VALL-E-like (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/valle/34_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    <td style="text-align: center;" valign='bottom' width=25%> FVN (convolved)
+        <audio controls style="width: 100%;" preload="none">
+	<source src="samples/blind_estimation/fvn/34_0_conv_pred.wav" type="audio/wav">
+	</audio>
+    </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <!-------------------------------------------------------------------->
+  <!-------------------------------------------------------------------->
+</center>

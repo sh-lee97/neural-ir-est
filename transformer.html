@@ -1,0 +1,90 @@
+<center>
+<table style="max-width:600px; border:0px;">
+<tr>
+<td style="max-width:600px; border:0px;">
+<center>
+<h3>Token Generation with Axial Transformers</h3>
+<small>
+<img src="figs/audiolm.png" alt="AudioLM-like model" style="width:480px; max-width:100%">
+<p class="small">
+</center>
+<b>Token decoding with AudioLM-like strategy. </b>
+We decode the token indices (frequency) column-by-column, in a raster-scan order across time and depth. Starting from (time=0, depth=0), we predict the following depth's indices, i.e., (time=0, depth=1) and (time=0, depth=2). Then, we decode the indices of time 1: (time=1, depth=0), (time=1, depth=1), and (time=1, depth=2). We use a single Time-Frequency Transformer (TF-Transformer) to achieve this.  
+<center>
+</p>
+<br>
+
+<img src="figs/audiolm-architecture.png" alt="AudioLM-like model" style="width:480px; max-width:100%">
+<p class="small">
+</center>
+<b>Implementation of the AudioLM-like strategy. </b>
+A TF-Transformer takes a start-of-sequence token as input and decodes the first column from (frequency=0, time=0, depth=0) to (frequency=F-1, time=0, depth=0). For simplicity, the number of frequency bins F is set to 2, while it is 32 in practice. Then, the column-by-column decoding is performed, as illustrated in the above figure. Before passing to TF-Transformer, we convert the decoded indices (denoted as Q) into discretized vectors by codebook lookup and apply a single linear layer. These preprocessed features are denoted as x. Then, add time-frequency positional encodings, which is a concatenation of time-axis and frequency-axis encoding vectors. We finish the decoding if the transformer outputs end-of-sequence tokens. To condition the generation process, we append the reference signal encodings z to the input.
+<center>
+</p>
+<br>
+
+<img src="figs/rqt.png" alt="AudioLM-like model" style="width:480px; max-width:100%">
+<p class="small">
+</center>
+<b>Token decoding with the RQ-Transformer-like strategy. </b>
+We use the same ordering used in the AudioLM-like method, but we use a separate Depth Transformer to decode across the depth axis.
+</p>
+<center>
+<br>
+
+<img src="figs/rqt-architecture.png" alt="AudioLM-like model" style="width:480px; max-width:100%">
+<p class="small">
+<b>Implementation of RQ-Transformer-like strategy. </b>
+Instead of processing every depth, the TF-Transformer computes a context vector for every time frame. Then, each context vector is passed to the Depth Transformer, which performs autoregressive decoding across the depth axis.
+</p>
+<br>
+
+<img src="figs/valle.png" alt="AudioLM-like model" style="width:480px; max-width:100%">
+<p class="small">
+</center>
+<b>Token decoding with VALL-E-like strategy. </b>
+Instead of the time-depth raster scan order, we first predict the (coarse) depth-0 tokens with a TF-Trasnformer. Then, we decode the entire token map of each following depth with another TF-Transformer.
+<center>
+</p>
+<br>
+
+<img src="figs/valle-architecture.png" alt="AudioLM-like model" style="width:480px; max-width:100%">
+<p class="small">
+</center>
+<b>Implementation of the VALL-E-like strategy. </b>
+We decode the depth-0 tokens autoregressively using the first TF-Transformer like we did in the AudioLM-like model. 
+Then, the decoded tokens are preprocessed and passed to the second TF-Transformer. 
+The second transformer also accepts the conditioning latent z and another depth encoding to differentiate different depths. 
+Unlike the first transformer, the second one does not have any causal mask; each token can globally access any other one. Since we use residual quantization of 3 codebooks, we need to pass the second transformer twice to decode the entire indices.
+<center>
+</p>
+<br>
+
+<img src="figs/transformer.png" alt="AudioLM-like model" style="width:480px; max-width:100%">
+<p class="small">
+</center>
+<b>Transformer architecture. </b>
+The TF-Transformer (left) stacks 4 identical blocks, where each block consists of two transformer encoder layers, one for the frequency axis and the other one for the sequence (time or flattened time/depth) axis. In other words, these two layers treat time axis and frequency axis as a batch axis, respectively. The TF-Transformer uses causal masks for the time-axis layers when we use it for the RQ-Transformer-like strategy or depth-0 decoding of VALL-E-like method.
+The Depth Transformer (right) is simply a stack of two causal encoder layers.
+In the figure, C, F, S, T, and D denote channel, frequency, sequence, time, and depth, respectively.
+<center>
+</p>
+<br>
+
+<h3>Conditional Generation with Reference Encoder</h3>
+<img src="figs/ref-encoder.png" alt="AudioLM-like model" style="width:380px; max-width:100%">
+<p class="small">
+</center>
+<b>Reference encoder architecture. </b>
+We borrow the MFTAA-Net, which is known for its state-of-the-art speech enhancement performance. 
+Specifically, we use only its encoder part with the following modifications. 
+(i) We replace the frequency-axis stride of the downsampling convolutions with the time-axis stride, and (ii) use the filterbanks for the frequency downsampling instead. 
+(iii) Then, we add attentive pooling to summarize the features across the time axis. The AxialSelfAttention from the MFTAABlock consists of frequency-axis and time-axis self-attention. 
+The MultiDilatedConv2d is a 4-group two-dimensional convolutional layer, which has a kernel size of (3, 7), a stride of (1, 2), and a dilation factor of [1, 2, 4, 8] (assigned for each group).
+<center>
+</p>
+<br>
+</small>
+</td>
+</tr>
+</table>

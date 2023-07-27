@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    div {
+      max-width: 1000px;
+      min-width: 600px;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Yet Another Generative Model For Room Impulse Response Estimation</title>
+</head>
+<body>
+  <center>
+  <h1> Yet Another Generative Model For Room Impulse Response Estimation  </h1>
+  Anonymous Submission to WASPAA 2023.
+    <br>
+    <br>
+    <table style="max-width:980px;">
+    <tr>
+    <td>
+    <hr>
+    <b>Abstract</b>
+    
+Recent neural room impulse response (RIR) estimators typically comprise an encoder for reference audio analysis and a generator for RIR synthesis. 
+      Especially, it is the performance of the generator that directly influences the overall estimation quality. 
+      In this context, we explore an alternate generator architecture for improved performance. 
+      We first train an autoencoder with residual quantization to learn a discrete latent token space, where each token represents a small time-frequency patch of the RIR. 
+      Then, we cast the RIR estimation problem as a reference-conditioned autoregressive token generation task, employing transformer variants that operate across frequency, time, and quantization depth axes. 
+      This way, we address the standard blind estimation task and additional acoustic matching problem, which aims to find an RIR that matches the source signal to the target signal's reverberation characteristics. 
+      Experimental results show that our system is preferable to other baselines across various evaluation metrics.
+
+
+<hr>
+  <h3> Audio Samples </h3>
+  <a href="autoencoding.html">Autoencoding</a><br>
+  <a href="analysis_synthesis.html">Analysis-Synthesis</a><br>
+  <a href="blind_estimation.html">Blind Estimation</a><br>
+  <a href="acoustic_matching_same_speaker.html">Acoustic Matching (Same Speaker)</a><br>
+  <a href="acoustic_matching_different_speaker.html">Acoustic Matching (Different Speaker)</a>
+<hr>
+
+
+<h3> Figures </h3>
+<center>
+<table style="max-width:100%">
+<tr>
+<td style="width:580px; border:0px; max-width:100%">
+<center>
+<img src="figs/framework.png" alt="Framework-train", style="width:480px; max-width:100%">
+</center>
+<small>
+<p class="small">
+<b> The Proposed Framework. </b> Left: discrete representation learning with RQ-VAE. We first transform an input RIR into time-frequency features. 
+Then, we train an autoencoder aiming for the reconstruction, while applying the residual quantization to the bottleneck.
+Right: token generation with axial transformers. Since we converted each RIR into discrete tokens, we can apply autoregressive modeling to them. 
+Specifically, we use multiple transformers that operates on frequency, time, and depth axis. 
+To estimate each RIR (tokens) from reference audio, we employ a reference encoder, condition its output to the transformers. 
+</p>
+</small>
+</td>
+</tr>
+</table>
+</center>
+
+
+<a href="discrete.html">Discrete Representation Learning via RQ-VAE</a><br>
+<a href="transformer.html">Token Generation with Axial Transformers</a><br>
+<a href="exps.html">Further Details on Experiments & Evaluations</a><br>
+
+
+
+<hr>
+</center>
+</body>
+</html>
